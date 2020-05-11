@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://vchrombie.github.io/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://vchrombie.github.io/blog/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://vchrombie.github.io/blog/archive</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://vchrombie.github.io/blog/community-bonding-1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/gsoc-acceptance</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/inctf19-quals</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/day-out-at-munroe-island</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/hackferencein18</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/double-ka-meetha</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://vchrombie.github.io/blog/community-bonding-1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/why-should-we-be-proud-of-being-indians</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/kwoc-end-report</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/life-lemonade</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -17,8 +17,8 @@
 <url> <loc>https://vchrombie.github.io/blog/unique-number</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/reuse-pendrive-after-booting</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/my-first-blog-post</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://vchrombie.github.io/blog/about</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/contact</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://vchrombie.github.io/blog/about</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/chaoss</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/ctf</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/food</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
