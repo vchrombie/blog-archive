@@ -3,6 +3,7 @@
 <url> <loc>https://vchrombie.github.io/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://vchrombie.github.io/blog/gsoc-acceptance</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/inctf19-quals</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/day-out-at-munroe-island</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/hackferencein18</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -17,12 +18,16 @@
 <url> <loc>https://vchrombie.github.io/blog/my-first-blog-post</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/about</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/contact</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://vchrombie.github.io/blog/tags/chaoss</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/ctf</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/food</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://vchrombie.github.io/blog/tags/g-so-c</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/general</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://vchrombie.github.io/blog/tags/grimoire-lab</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/hackathon</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/k-wo-c</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/open-source</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://vchrombie.github.io/blog/tags/prosoul</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/security</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/tech</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/travel</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
