@@ -67,6 +67,16 @@
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-tags-query-tsx-57a72caa72dedffe55a2.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </blog/page-data/tags/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/community-bonding-period
+  Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
+  Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
+  Link: </blog/f0e45107-1380087035cfcbb48a2b.js>; rel=preload; as=script
+  Link: </blog/app-fc431a010afa9938d0c7.js>; rel=preload; as=script
+  Link: </blog/styles-f12963b3798c232a68f6.js>; rel=preload; as=script
+  Link: </blog/aed2e917f30c051bccba91aa15989a75fd0bd633-2cf5bc133304d5f6dffd.js>; rel=preload; as=script
+  Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
+  Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </blog/page-data/community-bonding-period/page-data.json>; rel=preload; as=fetch; crossorigin
 /blog/community-bonding-4
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
