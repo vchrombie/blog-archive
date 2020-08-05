@@ -3,6 +3,7 @@
 <url> <loc>https://vchrombie.github.io/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://vchrombie.github.io/blog/coding-period-2-week-9</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/coding-period-2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/coding-period-2-week-8</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/coding-period-2-week-7</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -39,6 +40,7 @@
 <url> <loc>https://vchrombie.github.io/blog/tags/food</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/g-so-c</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/general</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://vchrombie.github.io/blog/tags/git-lab</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/grimoire-lab</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/hackathon</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/k-wo-c</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
