@@ -67,7 +67,7 @@
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-tags-query-tsx-57a72caa72dedffe55a2.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </blog/page-data/tags/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/coding-period-3-week-12
+/blog/cp-3-week-12
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
   Link: </blog/f0e45107-1380087035cfcbb48a2b.js>; rel=preload; as=script
@@ -76,8 +76,8 @@
   Link: </blog/aed2e917f30c051bccba91aa15989a75fd0bd633-2cf5bc133304d5f6dffd.js>; rel=preload; as=script
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/coding-period-3-week-12/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/coding-period-3-week-11
+  Link: </blog/page-data/cp-3-week-12/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/cp-3-week-11
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
   Link: </blog/f0e45107-1380087035cfcbb48a2b.js>; rel=preload; as=script
@@ -86,8 +86,8 @@
   Link: </blog/aed2e917f30c051bccba91aa15989a75fd0bd633-2cf5bc133304d5f6dffd.js>; rel=preload; as=script
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/coding-period-3-week-11/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/coding-period-3-week-10
+  Link: </blog/page-data/cp-3-week-11/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/cp-3-week-10
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
   Link: </blog/f0e45107-1380087035cfcbb48a2b.js>; rel=preload; as=script
@@ -96,8 +96,8 @@
   Link: </blog/aed2e917f30c051bccba91aa15989a75fd0bd633-2cf5bc133304d5f6dffd.js>; rel=preload; as=script
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/coding-period-3-week-10/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/coding-period-2-week-9
+  Link: </blog/page-data/cp-3-week-10/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/cp-3-week-9
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
   Link: </blog/f0e45107-1380087035cfcbb48a2b.js>; rel=preload; as=script
@@ -106,7 +106,7 @@
   Link: </blog/aed2e917f30c051bccba91aa15989a75fd0bd633-2cf5bc133304d5f6dffd.js>; rel=preload; as=script
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/coding-period-2-week-9/page-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </blog/page-data/cp-3-week-9/page-data.json>; rel=preload; as=fetch; crossorigin
 /blog/coding-period-2
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
@@ -117,7 +117,7 @@
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </blog/page-data/coding-period-2/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/coding-period-2-week-8
+/blog/cp-2-week-8
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
   Link: </blog/f0e45107-1380087035cfcbb48a2b.js>; rel=preload; as=script
@@ -126,8 +126,8 @@
   Link: </blog/aed2e917f30c051bccba91aa15989a75fd0bd633-2cf5bc133304d5f6dffd.js>; rel=preload; as=script
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/coding-period-2-week-8/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/coding-period-2-week-7
+  Link: </blog/page-data/cp-2-week-8/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/cp-2-week-7
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
   Link: </blog/f0e45107-1380087035cfcbb48a2b.js>; rel=preload; as=script
@@ -136,8 +136,8 @@
   Link: </blog/aed2e917f30c051bccba91aa15989a75fd0bd633-2cf5bc133304d5f6dffd.js>; rel=preload; as=script
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/coding-period-2-week-7/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/coding-period-2-week-6
+  Link: </blog/page-data/cp-2-week-7/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/cp-2-week-6
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
   Link: </blog/f0e45107-1380087035cfcbb48a2b.js>; rel=preload; as=script
@@ -146,8 +146,8 @@
   Link: </blog/aed2e917f30c051bccba91aa15989a75fd0bd633-2cf5bc133304d5f6dffd.js>; rel=preload; as=script
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/coding-period-2-week-6/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/coding-period-1-week-5
+  Link: </blog/page-data/cp-2-week-6/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/cp-2-week-5
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
   Link: </blog/f0e45107-1380087035cfcbb48a2b.js>; rel=preload; as=script
@@ -156,7 +156,7 @@
   Link: </blog/aed2e917f30c051bccba91aa15989a75fd0bd633-2cf5bc133304d5f6dffd.js>; rel=preload; as=script
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/coding-period-1-week-5/page-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </blog/page-data/cp-2-week-5/page-data.json>; rel=preload; as=fetch; crossorigin
 /blog/coding-period-1
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
@@ -167,7 +167,7 @@
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </blog/page-data/coding-period-1/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/coding-period-1-week-4
+/blog/cp-1-week-4
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
   Link: </blog/f0e45107-1380087035cfcbb48a2b.js>; rel=preload; as=script
@@ -176,8 +176,8 @@
   Link: </blog/aed2e917f30c051bccba91aa15989a75fd0bd633-2cf5bc133304d5f6dffd.js>; rel=preload; as=script
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/coding-period-1-week-4/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/coding-period-1-week-3
+  Link: </blog/page-data/cp-1-week-4/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/cp-1-week-3
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
   Link: </blog/f0e45107-1380087035cfcbb48a2b.js>; rel=preload; as=script
@@ -186,8 +186,8 @@
   Link: </blog/aed2e917f30c051bccba91aa15989a75fd0bd633-2cf5bc133304d5f6dffd.js>; rel=preload; as=script
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/coding-period-1-week-3/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/coding-period-1-week-2
+  Link: </blog/page-data/cp-1-week-3/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/cp-1-week-2
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
   Link: </blog/f0e45107-1380087035cfcbb48a2b.js>; rel=preload; as=script
@@ -196,8 +196,8 @@
   Link: </blog/aed2e917f30c051bccba91aa15989a75fd0bd633-2cf5bc133304d5f6dffd.js>; rel=preload; as=script
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/coding-period-1-week-2/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/coding-period-1-week-1
+  Link: </blog/page-data/cp-1-week-2/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/cp-1-week-1
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
   Link: </blog/f0e45107-1380087035cfcbb48a2b.js>; rel=preload; as=script
@@ -206,7 +206,7 @@
   Link: </blog/aed2e917f30c051bccba91aa15989a75fd0bd633-2cf5bc133304d5f6dffd.js>; rel=preload; as=script
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/coding-period-1-week-1/page-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </blog/page-data/cp-1-week-1/page-data.json>; rel=preload; as=fetch; crossorigin
 /blog/community-bonding-period
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
@@ -217,7 +217,7 @@
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </blog/page-data/community-bonding-period/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/community-bonding-4
+/blog/cb-week-4
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
   Link: </blog/f0e45107-1380087035cfcbb48a2b.js>; rel=preload; as=script
@@ -226,8 +226,8 @@
   Link: </blog/aed2e917f30c051bccba91aa15989a75fd0bd633-2cf5bc133304d5f6dffd.js>; rel=preload; as=script
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/community-bonding-4/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/community-bonding-3
+  Link: </blog/page-data/cb-week-4/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/cb-week-3
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
   Link: </blog/f0e45107-1380087035cfcbb48a2b.js>; rel=preload; as=script
@@ -236,8 +236,8 @@
   Link: </blog/aed2e917f30c051bccba91aa15989a75fd0bd633-2cf5bc133304d5f6dffd.js>; rel=preload; as=script
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/community-bonding-3/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/community-bonding-2
+  Link: </blog/page-data/cb-week-3/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/cb-week-2
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
   Link: </blog/f0e45107-1380087035cfcbb48a2b.js>; rel=preload; as=script
@@ -246,8 +246,8 @@
   Link: </blog/aed2e917f30c051bccba91aa15989a75fd0bd633-2cf5bc133304d5f6dffd.js>; rel=preload; as=script
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/community-bonding-2/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/community-bonding-1
+  Link: </blog/page-data/cb-week-2/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/cb-week-1
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
   Link: </blog/f0e45107-1380087035cfcbb48a2b.js>; rel=preload; as=script
@@ -256,7 +256,7 @@
   Link: </blog/aed2e917f30c051bccba91aa15989a75fd0bd633-2cf5bc133304d5f6dffd.js>; rel=preload; as=script
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-14b03579a39fd1812866.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/community-bonding-1/page-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </blog/page-data/cb-week-1/page-data.json>; rel=preload; as=fetch; crossorigin
 /blog/gsoc-acceptance
   Link: </blog/webpack-runtime-5f33d77bd3afe0ea34af.js>; rel=preload; as=script
   Link: </blog/framework-d18255661b01063664e4.js>; rel=preload; as=script
