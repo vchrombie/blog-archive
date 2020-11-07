@@ -26,31 +26,35 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-db8f3df7a16b25a19822.js"
+    "url": "webpack-runtime-8ca3d6dbf87288a7416a.js"
   },
   {
-    "url": "framework-d18255661b01063664e4.js"
+    "url": "framework-cd3e1e804d552fa282ef.js"
   },
   {
-    "url": "f0e45107-1380087035cfcbb48a2b.js"
+    "url": "app-f61a9308648e86f5fb54.js"
   },
   {
-    "url": "app-d61581026c57909ace7b.js"
-  },
-  {
-    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-f9fbe525d273be6f1f74.js"
+    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-0f40d706ebc58d78c1f6.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "a408885890c0d1a22115b40ffb38b175"
+    "revision": "0ab69f64f9cfd3d183578e63423812e5"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "c355c8040c47a63bfb3360e4b7cb6553"
+    "revision": "3b61dc2341acfec22e052e20d565279c"
+  },
+  {
+    "url": "page-data/sq/d/3090400250.json",
+    "revision": "3fe58db8db395902ac3ef33feb535838"
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "cea05f8f2a9572d333d29d1c4dc38bbe"
+    "revision": "e0a985f86c10b74ed304fe38944a6350"
+  },
+  {
+    "url": "polyfill-afb298e3d6be300c6fc3.js"
   },
   {
     "url": "manifest.json",
@@ -58,7 +62,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "cbb576979b37f542e3b81ee412c4a471"
+    "revision": "9e82bd195456b368a891a3eee993031f"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
@@ -82,7 +86,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/blog/app-d61581026c57909ace7b.js`))) {
+  if (!resources || !(await caches.match(`/blog/app-f61a9308648e86f5fb54.js`))) {
     return await fetch(event.request)
   }
 
