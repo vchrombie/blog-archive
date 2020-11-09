@@ -1,0 +1,143 @@
+---
+title: semana uno
+date: 2020-06-08
+tags: 
+  - GSoC
+  - CHAOSS
+  - ELK
+slug: "cp-1-week-1"
+---
+
+#### Coding Period 1, Week 1: Baby steps 🐥.
+
+Hola!
+
+We entered the official coding period 🥳 and I'm here with the report of the work done in the first week of the coding period. We had a meeting, [2020-06-04-coding-period-1-week-1.txt](https://github.com/vchrombie/gsoc/blob/master/meetings/2020-06-04-coding-period-1-week-1.txt), a few days back and we discussed the completed work till now and planned some work for the upcoming week. I'm expecting to show a small working demo of the project this Friday (hopefully 🤞).
+
+During the last week's meeting of the community bonding, I planned to start working on the QM enrichers and I picked gitlab as my first option because I was already working on _gitlabcomments_ enricher. I opened an issue to track its progress. [vchrombie/gsoc#6](https://github.com/vchrombie/gsoc/issues/6)
+
+I implemented the basic structure of the QM enrichers. I planned to have a parent class `QMEnrich` which is inherited by the child class `QMGitLabEnrich`. I would be following the same approach as the qm enrichers might share a few things (mapping) in common.
+
+parent
+```noLineNumbers
+class QMMapping(BaseMapping):
+
+    def get_elastic_mappings(es_major):
+
+
+class QMEnrich(Enrich):
+    mapping = QMMapping
+```
+
+child (enricher)
+```noLineNumbers
+class QMGitLabEnrich(QMEnrich):
+
+    def __init__()
+
+    def enrich_items(self, ocean_backend):
+
+```
+
+Working Branch 👉 https://github.com/vchrombie/grimoirelab-elk/tree/gitlabqm
+
+The main step of building an enricher is to get a minimal idea 💭 of the data format of the enriched item. I checked the existing index format which I used during the [microtask-9](https://github.com/vchrombie/chaoss-microtasks/tree/master/microtask-9). I was able to figure out a decent format of the index which can be consumed by Prosoul. Ideally, the enricher should perform queries to get the data for every day.
+
+For example: If we want to measure the number of issues opened, the enriched data should be a document per day giving the value of the number of issues opened that day. (something like)
+
+```
+{
+  "Date" : "20181229",
+  "numberOfIssuesOpened" : 8
+},
+{
+  "Date" : "20181230",
+  "numberOfIssuesOpened" : 5
+},
+```
+
+I need to change the format a bit (as we don't need a few items 🙅‍♂️). [vchrombie/gsoc#7](https://github.com/vchrombie/gsoc/issues/7)
+
+
+I was contemplating about the metrics that can be extracted from the gitlab data. Valerio suggested a few metrics.
+- number of issues per day
+- number of comments per day
+- number of merges per day
+
+I was thinking over it and felt we can divide these metrics into some more detail. 🤔
+- number of issues per day
+    - number of issued opened per day
+    - number of issues closed per day
+    - number of issues attended per day
+
+I got this idea from this quality model, [developer_model.json](https://github.com/Bitergia/prosoul/blob/master/django-prosoul/prosoul/data/developer_model.json). We need to dig more into these metrics and find all that metrics which we can extract from the gitlab data (versions, labels, milestones). I will check the existing qms for more inspiration. [vchrombie/gsoc#8](https://github.com/vchrombie/gsoc/issues/8)
+
+
+Other than planned in the timeline, I also worked on the _gitlabcomments_ enricher ([chaoss/grimoirelab-elk#881](https://github.com/chaoss/grimoirelab-elk/pull/881)) and achieved a considerable target 🤘. I completed working on the enricher and Valerio pointed out some mistakes which I corrected and got the enricher working. 
+
+Valerio also found out the peculiar mapping of this enricher. The implementation of `__get-reactions()` (which stores the reaction data of issues/mrs/comments) creates a mapping with each reaction separately, resulting in a lot of unnecessary mapping being created.
+
+```
+  "project": {
+    "type": "keyword"
+  },
+  "reaction_100" : {
+    "type" : "long"
+  },
+  "reaction_basketball_player" : {
+    "type" : "long"
+  },
+  "reaction_bow" : {
+    "type" : "long"
+  },
+  "repository": {
+    "type": "keyword"
+  },
+  "sub_type": {
+    "type": "keyword"
+  },
+```
+
+We discussed it and Valerio suggested a new mapping. We had to change the logic according to the new mapping.
+
+```
+  "project": {
+    "type": "keyword"
+  },
+  "reactions": {
+    "properties": {
+      "count": {
+        "type": "long"
+      },
+      "type": {
+        "type": "keyword"
+      }
+    }
+  },
+  "repository": {
+    "type": "keyword"
+  },
+```
+
+This mapping and implementation stores the data as
+
+```noLineNumbers
+  "reactions": [
+    {
+      "type": "rocket",
+      "count": 1
+    },
+    {
+      "type": "smiley",
+      "count": 2
+    },
+    {
+      "type": "thumbsup",
+      "count": 4
+    }
+  ],
+```
+
+Now the mapping makes more sense. The enricher and configurations are completed, schema and tests are pending. [vchrombie/gsoc#4](https://github.com/vchrombie/gsoc/issues/4)
+
+If you have any comments or questions, please make sure to comment down below. :)

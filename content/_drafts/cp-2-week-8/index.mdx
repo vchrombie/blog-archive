@@ -1,0 +1,45 @@
+---
+title: semana ocho
+date: 2020-07-26
+tags: 
+  - GSoC
+  - CHAOSS
+  - ELK
+slug: "cp-2-week-8"
+---
+
+#### Coding Period 2, Week 8: Adding tests 🧪.
+
+I worked on the _meetupqm_ enricher and completed implementing all the metrics.
+
+I started working on the tests for the existing enrichers. [vchrombie/gsoc#15](https://github.com/vchrombie/gsoc/issues/15)
+- _gitlabqm_
+- _gitqm_
+- _pipermailqm_
+- _meetupqm_
+
+I had some pretty good experience working with tests as I have tried it on the gitlabcomments enricher during the Community Bonding Period. Though that PR is not completed, I plan to complete it soon, or even after the GSoC period. I took some inspiration from the implementation of tests and started working.
+
+Basically, you need to add the test data in the specific folder and create test scripts. The testing script has to create a mock server and enrich the test data. Now, we try to test the enriched values with the expected values using the `assert` statements.
+
+I'm adding a code snippet from the gitlabcomments test.
+
+```
+item = self.items[4]
+eitem = enrich_backend.get_rich_item(item)
+self.assertEqual(item['category'], 'merge_request')
+self.assertEqual(eitem['merge_state'], 'merged')
+self.assertEqual(eitem['author_name'], 'Vaishnav')
+self.assertIsNone(eitem['author_domain'])
+self.assertIsNone(eitem['merge_author_domain'])
+```
+
+Also, I have opened an issue for discussions to add more quality models using the metrics extracted from different data sources during the project. If you are interested, please drop your suggestions on the issue thread. [vchrombie/gsoc#16](https://github.com/vchrombie/gsoc/issues/16)
+
+I worked on making a talk proposal about Prosoul so that I can apply for a few conferences. I made a presentation for the same purpose. Here is the link to the slides, [Talk about Prosoul and QM Slides](https://docs.google.com/presentation/d/1Yfkgx7DYG9bJINZ6gdvlYH878s9AIbxgxPZak6pVr_g/edit?usp=sharing).
+
+I started working on the [GitLab.org](https://gitlab.com/gitlab-org/) pilot study. 🛩️
+
+I'm planning to complete the tests and the pilot study this week.
+
+If you have any comments or questions, please make sure to comment down below. :)

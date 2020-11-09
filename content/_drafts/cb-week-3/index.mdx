@@ -1,0 +1,60 @@
+---
+title: unión comunitaria 3
+date: 2020-05-25
+tags: 
+  - GSoC
+  - CHAOSS
+  - Perceval
+slug: "cb-week-3"
+---
+
+Hello
+
+The third week of the community bonding period is completed and I would like to share the updates here. We had a meeting last Thursday and we discussed about the backlog of my work and also the blockers and issues I was facing. You can find the log of the meeting here, [2020-05-21-community-bonding-3.txt](https://github.com/vchrombie/gsoc/blob/master/meetings/2020-05-21-community-bonding-3.txt).
+
+During the application period, I have proposed an idea of adding perceval support for Zulip chat. We had a lot of discussion on how to integrate this backend to Perceval. I collected the required information regarding the API, what data should be fetched, and about the authentication. 🏃‍♂️
+
+> You can view the whole discussion here, [chaoss/grimoirelab-perceval#630](https://github.com/chaoss/grimoirelab-perceval/issues/630). 
+
+The API doesn't have a `from_date` field. We later asked the Zulip developers if they would be interested to implement this feature, [zulip/zulip#14558](https://github.com/zulip/zulip/issues/14558). But the discussion was not much useful. So, we have opted for the *offset-based* implementation.
+
+Last week, I got time to work on it. I had a look at the other backends like slack, gitter, and telegram. I worked a bit and I sent a PR by then, [chaoss/grimoirelab-perceval#667](https://github.com/chaoss/grimoirelab-perceval/pull/667). I had some progress with that this week. Valerio shared some pointers in the meeting which gave me a good understanding of the offset approach and how to use it in ELK. He suggested a lot of improvements in the PR too. With his help, I was able to run the backend to fetch a few messages. Later, I implemented the incremental fetching logic and it worked pretty well. I tested it against a few streams like [core/help](https://python.zulipchat.com/#narrow/stream/core.2Fhelp) of the [python.zulipchat.com](https://python.zulipchat.com). 🚀
+
+> python.zulipchat.com, stream: `core/help`
+
+```noLineNumbers
+[2020-05-24 15:53:49,517] - Summary of results
+
+       Total items:     820
+    Items produced:     820
+     Items skipped:     0
+
+    Last item UUID:     77fc711abe7ca9738d7c496b1efbcdf455b5e249
+    Last item date:     2020-04-27 01:38:46+00:00
+
+    Min. item date:     2018-04-05 00:49:12+00:00
+    Max. item date:     2020-04-27 01:38:46+00:00
+
+    Min. offset:     -    Max. offset:     -    Last offset:     -
+
+
+[2020-05-24 15:53:49,518] - Sir Perceval completed his quest.
+```
+
+I also discussed and added an extra field `stream` to the `search_fields` which helps to simplify the searches by avoiding to inspect what is inside the `data` attribute of the perceval document. I thought the PR was in good shape already I got reminded of the unit tests after that.
+
+![unit-tests, quickmeme.com](images/unit-tests.jpg)
+
+I have never really worked with unit tests before. I referred a few previous PRs and looked upon how the tests are written. I still have some errors persisting. I need to fix the tests and complete the PR by this week which adds a new backend to Perceval. 🎉
+
+> If you are interested to learn more about Perceval, you can read this blog post [Perceval: Software Project Data at Your Will](https://blog.bitergia.com/2018/05/01/perceval-software-project-data-at-your-will/) written by Valerio.
+
+Other than this, I have started working on the *gitlabcomments* enricher too. After the week-2, [unión comunitaria 2](https://vchrombie.github.io/blog/community-bonding-2), I got a good understanding of how an enricher works. I have referred the implementations of a few basic enrichers like slack, gitlab, and a few others. Valerio suggested working on this *gitlabcomments* enricher. 
+
+As of now, the *gitlab* enricher enriches the data of issues and merge requests just like how *github* enricher works for issues and pull requests. Later, *github2* enricher was introduced which enriches the review data like the issue comments, pull requests, and emoji reactions. As the same data is being fetched for GitLab too, we planned to create another enricher for gitlab, just like *github2*. I have started the work and I plan to create an initial PR in the upcoming week.
+
+Also, I went around Prosoul codebase to look at how the enriched data is processed to create assessments and dashboards. I need to figure out the data format which is consumable by Prosoul using the quality models, preferably before the coding period starts. 🥶
+
+For more details, please check the project tracker: https://github.com/vchrombie/gsoc.
+
+If you have any comments or questions, please make sure to comment down below. :)

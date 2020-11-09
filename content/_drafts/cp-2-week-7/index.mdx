@@ -1,0 +1,34 @@
+---
+title: semana siete
+date: 2020-07-20
+tags: 
+  - GSoC
+  - CHAOSS
+  - ELK
+slug: "cp-2-week-7"
+---
+
+#### Coding Period 2, Week 7: More Data Sources 🤹.
+
+I'm back with the seventh-week update of my work. We had a meeting last Thursday about the updates and the work for next week. You can find the log here, [2020-07-16-coding-period-2-week-7.txt](https://github.com/vchrombie/gsoc/blob/master/meetings/2020-07-16-coding-period-2-week-7.txt).
+
+This week, I mostly focused on adding support for other data sources like pipermail and meetup. We discussed the metrics that we can add for _pipermailqm_. [vchrombie/gsoc#11](https://github.com/vchrombie/gsoc/issues/11)
+  - number of emails
+  - number of replies
+  - number of threads
+  - number of users
+
+I worked on these metrics and implemented all of them. 💯
+
+We also discussed the metrics and implementation possibilities for _meetupqm_. [vchrombie/gsoc#14](https://github.com/vchrombie/gsoc/issues/14)
+  - number of RSVPs
+  - number of comments
+  - number of yes RSVPs
+
+There is one particular case in the meetup metrics. The number of yes RSVPs is not a _per-day_ metric, unlike the other. It would be a _per-event_ metric. We decided to use the event date as the required datetime field. 🕴️
+
+There were two pending metrics from the gitlabqm (number of issues/merge requests attended) that we proposed earlier. I completed their implementation this week. [vchrombie/gsoc#8](https://github.com/vchrombie/gsoc/issues/8)
+
+Now that we will have meetup on the list, we are planning to do a pilot study on all the projects of [GitLab.org](https://gitlab.com/gitlab-org/) in the upcoming week. I'll also work on finishing the meetupqm enricher and work on tests for enrichers too in the next week.
+
+If you have any comments or questions, please make sure to comment down below. :)
