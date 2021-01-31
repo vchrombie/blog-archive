@@ -3,6 +3,7 @@
 <url> <loc>https://vchrombie.github.io/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/archive</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://vchrombie.github.io/blog/ci-with-gha</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/what-next</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/covid-19-phase</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/gsoc-final-report</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -22,8 +23,8 @@
 <url> <loc>https://vchrombie.github.io/blog/unique-number</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/reuse-pendrive-after-booting</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/my-first-blog-post</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://vchrombie.github.io/blog/contact</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/about</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://vchrombie.github.io/blog/contact</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/bitergia</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/chaoss</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags/covid-19</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
