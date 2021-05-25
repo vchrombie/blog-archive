@@ -62,15 +62,6 @@
   Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-tags-query-tsx-383037c12fa427d70cc8.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </blog/page-data/tags/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/automating-the-release-workflow
-  Link: </blog/webpack-runtime-43207c0f0dd31db79a1f.js>; rel=preload; as=script
-  Link: </blog/framework-cd3e1e804d552fa282ef.js>; rel=preload; as=script
-  Link: </blog/app-bff6c5a555bc02094829.js>; rel=preload; as=script
-  Link: </blog/styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
-  Link: </blog/aed2e917f30c051bccba91aa15989a75fd0bd633-022618ea539eb2ad2b3e.js>; rel=preload; as=script
-  Link: </blog/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-post-query-tsx-e3200863b5a21b00df2a.js>; rel=preload; as=script
-  Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/automating-the-release-workflow/page-data.json>; rel=preload; as=fetch; crossorigin
 /blog/cd-with-gha
   Link: </blog/webpack-runtime-43207c0f0dd31db79a1f.js>; rel=preload; as=script
   Link: </blog/framework-cd3e1e804d552fa282ef.js>; rel=preload; as=script

@@ -3,7 +3,6 @@
 <url> <loc>https://vchrombie.github.io/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/archive</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://vchrombie.github.io/blog/automating-the-release-workflow</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/cd-with-gha</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/ci-with-gha</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://vchrombie.github.io/blog/what-next</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
