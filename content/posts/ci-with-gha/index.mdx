@@ -1,0 +1,107 @@
+---
+title: Continuous Integration with GitHub Actions
+date: 2021-01-15
+tags: 
+  - GrimoireLab
+  - CHAOSS
+slug: "ci-with-gha"
+---
+
+It all started with a big announcement made by the Travis CI team about their change in their pricing model. You can read about it from here, [The new pricing model for travis-ci.com](https://blog.travis-ci.com/2020-11-02-travis-ci-new-billing). It made us think about the other options we have now, [discussion](https://github.com/chaoss/grimoirelab/issues/400).
+
+As [@ElizabethN](https://github.com/ElizabethN) quotes
+> It looks like we will either have to bite the bullet and migrate to GitHub Actions or bite a bigger one and move the whole org to GitLab & GitLab CI.
+
+We had a few options, so I talked to [@sduenas](https://github.com/sduenas) about it, and we decided to try GitHub Actions to see how it works. I worked on creating a GHA for the toolkit and perceval. I referred to the [GitHub Actions Documentation](https://docs.github.com/en/actions) and observed a few things.
+- the syntax is almost similar to that of travis solutions
+- travis had a few things pre-configured in the systems, but in github actions, you need to configure them
+- the documentation is  good, and it was so much of help
+- it has an actively growing community around it, with forums asking and answering questions
+- the UI wasn't impressive (but they have updated it during GitHub Universe, and it looks super now)
+- github actions is super fast than travis.org (maybe because travis.org started throttling performance since it will be shutting down soon)
+
+It was simple. I was able to create a workflow for the toolkit at the very first attempt. The main challenge is, there are a few tools in the GrimoireLab toolset that require services like mysql, elasticsearch, etc. The documentation and a few other built-in actions have come to the rescue.
+
+I will share some different services which we had to use.
+
+- MySQL - services in GitHub Actions
+```yaml
+
+    services:
+      # How to use MySQL
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: root
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+    
+    steps:
+  	...
+    - name: Verify MySQL connection
+      run: |
+        sudo apt-get install -y mysql-client libmysqlclient-dev
+        mysql --host 127.0.0.1 --port ${{ job.services.mysql.ports[3306] }} -uroot -proot -e "SHOW GRANTS FOR 'root'@'localhost'"
+        mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql --host 127.0.0.1 --port ${{ job.services.mysql.ports[3306] }} -uroot -proot mysql
+    
+    - name: Setup MySQL Database
+      env:
+        DB_HOST: 127.0.0.1
+        DB_PORT: ${{ job.services.mysql.ports[3306] }}
+      run: |
+        mysql --host $DB_HOST --port $DB_PORT -uroot -proot -e "SHOW DATABASES"
+```
+
+- Elasticsearch - [elastic/elastic-github-actions](https://github.com/elastic/elastic-github-actions)
+```yaml
+    
+    strategy:
+      matrix:
+        elasticsearch-version: [6.1.0, 7.2.0]
+    
+    steps:
+ 	...
+    - name: Configure sysctl limits
+      run: |
+        sudo swapoff -a
+        sudo sysctl -w vm.swappiness=1
+        sudo sysctl -w fs.file-max=262144
+        sudo sysctl -w vm.max_map_count=262144
+      
+    - name: Runs Elasticsearch ${{ matrix.elasticsearch-version }}
+      uses: elastic/elastic-github-actions/elasticsearch@master
+      with:
+        stack-version: ${{ matrix.elasticsearch-version }}
+      
+    - name: Verify Elasticsearch connection
+      run: |
+        curl -fsSL "http://localhost:9200/_cat/health?h=status"
+```
+
+- Coveralls - [TheKevJames/coveralls-python](https://github.com/TheKevJames/coveralls-python)
+```yaml
+    
+    steps:
+  	...
+      - name: Install dependencies
+        run: pip install coveralls
+      
+      - name: Tests and Coverage
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd tests
+          coverage run --source=grimoirelab_toolkit run_tests.py
+          # --service=github is a workaround for bug
+          # https://github.com/coveralls-clients/coveralls-python/issues/251
+          coveralls --service=github
+```
+
+The coveralls gave several errors without the flag `--service=github`. I found a workaround with the help of the community.
+
+I faced some other challenges too, which are mostly configuration issues with the database and the tools. It exposed some loopholes in the documentation of the GrimoireLab project. I spent almost two weeks scratching my head to fix such configuration issues in [ELK](https://github.com/chaoss/grimoirelab-elk), but [@mafesan](https://github.com/mafesan) helped me fix them.
+
+I worked on all the components, porting the CI and fixing any issues with the tests like flake8 errors and incomplete configurations in the repository. Within a few weeks, we completed the job and ported all the repositories from Travis CI to GHA. You can find the issue from here, [chaoss/grimoirelab#405](https://github.com/chaoss/grimoirelab/issues/405).
+
+The next comes the Continuous Deployment with GitHub Actions. 👋

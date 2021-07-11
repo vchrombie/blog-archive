@@ -1,0 +1,96 @@
+---
+title: Continuous Delivery with GitHub Actions
+date: 2021-02-16
+tags: 
+  - GrimoireLab
+slug: "cd-with-gha"
+---
+
+This post would talk discuss how we have set up the Continuous Delivery system using GitHub Actions. This is a continuation post of [Continuous Integration with GitHub Actions](https://vchrombie.github.io/blog/ci-with-gha).
+
+Continuous delivery (CD) is an approach to software engineering based on producing software in short cycles. We want to generate the GrimoireLab releases very frequently but updating all the PyPI images manually is a big task. We wanted to use GitHub Actions to do this job. Whenever a new tag is produced, the project has to be built and published to PyPI.
+
+We were planning to migrate to using Poetry for managing the GrimoireLab project for a long time. [Poetry](https://github.com/python-poetry/poetry) is a tool to handle dependency installation as well as building and packaging Python packages. It makes the tasks simple so, we worked on adding the support for Poetry to all the GrimoireLab tools.
+
+We need to install [Poetry](https://python-poetry.org/docs/#installation), and later we can use the below commands to convert any project to a poetry-based project.
+
+`poetry init` would initialize a project, you are expected to fill the required fields, and later generates the _pyproject.toml_ file. `poetry add package_name` would add the _package_name_ as the main dependency, whereas `poetry add -D package_name` would add the _package_name_ as a developer dependency.
+```bash
+$ poetry init
+$ poetry add `cat requirements.txt`
+$ poetry add -D `cat requirements_tests.txt`
+```
+
+You can add additional fields which might be needed according to the project like classifiers, packages, license in the _pyproject.toml_ file. You can find the whole list in the documentation, [The pyproject.toml file](https://python-poetry.org/docs/pyproject/).
+
+Once the pyproject.toml is configured correctly, you can install the project using `poetry install`. This would create a virtual environment and it can be activated using `poetry shell`.
+```bash
+$ poetry install
+$ poetry shell
+```
+
+We can build the package using `poetry build`, this would create the wheel and tar packages in the `dist` folder. Later, we can use `poetry publish` to publish these wheel packages to PyPI directly. Make sure you have configured the PyPI token accordingly.
+```bash
+$ poetry build
+$ poetry publish
+```
+
+Now that we have the required setup and the steps, it is quite easy to create a github actions for publising the packages to PyPI. We created the below github action for the same purpose.
+```yaml
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Install poetry
+        run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+      - name: Build distributions
+        run: poetry build
+      - name: Upload distribution artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: rt-dist
+          path: dist
+
+  publish:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download distribution artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: rt-dist
+          path: dist
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Install poetry
+        run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+      - name: Configure pypi credentials
+        env:
+          PYPI_API_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
+        run: poetry config http-basic.pypi __token__ "$PYPI_API_TOKEN"
+      - name: Publish release to pypi
+        run: poetry publish
+```
+
+The action needs to be triggered whenever a release is made. A release tag (eg. 0.1.12) is generated and pushed to the repository whenever the maintainer publishes a release. This can be added as a rule in the github actions.
+
+```yaml
+on:
+  push:
+    tags: 
+      - '*.*.*'
+```
+
+We have tested this on a couple of repositories and it worked like a charm. We have some plans to expand this to create a full automatic release workflow system to manage and create releases. I will come up with another blog post soon about it.
+
+~ Venu 
+👋
