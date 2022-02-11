@@ -8,6 +8,24 @@ Comments [utteranc.es](https://utteranc.es/), https://github.com/vchrombie/comme
 
 ## Additional plugins
 
+### [gatsby-plugin-google-analytics](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-google-analytics)
+
+```shell
+npm install gatsby-plugin-google-analytics
+```
+
+gatsby-config.js
+```js
+plugins: [
+  {
+    resolve: `gatsby-plugin-google-analytics`,
+    options: {
+      trackingId: `UA-121045448-1`,
+    },
+  },
+]
+```
+
 ### [gatsby-plugin-twitter](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-twitter)
 
 ```shell
