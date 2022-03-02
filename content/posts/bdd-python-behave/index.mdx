@@ -1,0 +1,305 @@
+---
+title: BDD with Python and Behave
+date: 2022-03-02
+tags:
+  - python
+  - behave
+  - bdd
+slug: "bdd-python-behave"
+---
+
+### Introduction
+
+Behavior Driven Development (BDD) is an agile software development technique that mainly encourages collaboration between developers, non-technical or business participants in a software project. In short, both technical and non-technical individuals have a role to play towards the overall project. It has tests developed in plain text with the implementation logic in Python.
+
+By the end of this tutorial, you should be able to write basic behavioral tests using [Behave](https://github.com/behave/behave).
+
+### Prerequisites
+
+Before starting, please make sure you have installed the following:
+
+- [Python 3.x](https://www.python.org/downloads/)
+- [Behave](https://pypi.org/project/behave/)
+
+### Setting Up Your Environment
+
+This tutorial will walk you through writing tests for and coding a feature of a Simple Calculator. To get started, create a root directory where your code will go, and then create the following directories and blank files:
+
+```bash
+$ tree
+.
+|____features
+| |____calculator.feature
+| |____steps
+|   |____steps.py
+|____calculator.py
+```
+
+Here’s a brief explanation of the files:
+
+- `calculator.feature`: The written out tests for the calculator.
+- `steps.py`: The code that runs the tests in calculator.feature.
+- `calculator.py`: The implementation code for the calculator.
+
+### Writing Your First Test
+
+Behavioral tests are much similar to TDD methodology. We will start with the tests first.
+
+#### Writing the Scenario
+
+Open `calculator.feature` and add the following first line:
+
+```feature
+Feature: Test Calculator Functionality
+```
+
+This line describes the features of the application. For our project, Calculator, we might not have many features but in large scale application we would have many features. Next, we will add a test. The first test would be very simple - _Add two numbers_.
+
+```feature
+Feature: Test Calculator Functionality
+  Scenario: Add two numbers
+```
+
+Before we write more, we need to understand the three phases of a basic Behave test: `Given`, `When`, and `Then`.
+
+**Given** initializes a state, **When** describes an action, and **Then** states the expected outcome. For this test, our state is having the two numbers, the action is adding them, and the expected outcome is that expecting the result to be sum of the two numbers. Here’s how this is translated into a Behave test:
+
+```feature
+Feature: Test Calculator Functionality=
+  Scenario: Addition
+      Given I have the numbers 10 and 5
+      When I add them
+      Then I expect the result to be 15
+```
+
+Notice that the three phases read like a normal English sentence. You should strive for this when writing behavioral tests because they are easily readable by anyone working in the code base (need not be a developer).
+
+Now to see how Behave works, simply open a terminal in the root directory of your code and run the `behave` command and you should see the output.
+
+```bash
+$ behave
+Feature: Test Calculator Functionality # features/calculator.feature:2
+
+  Scenario: Addition                  # features/calculator.feature:4
+    Given I have the numbers 10 and 5 # None
+    When I add them                   # None
+    Then I expect the result to be 15 # None
+
+
+Failing scenarios:
+  features/calculator.feature:4  Addition
+
+0 features passed, 1 failed, 0 skipped
+0 scenarios passed, 1 failed, 0 skipped
+0 steps passed, 0 failed, 0 skipped, 3 undefined
+Took 0m0.000s
+
+...
+```
+
+The key part here is that we have one failing scenario (and therefore a failing feature) that we need to fix. Below that, Behave suggests how to implement steps. You can think of a step as a task for Behave to execute. Each phase (“given”, “when”, and “then”) are all implemented as steps.
+
+#### Writing the Steps
+
+The steps that Behave runs are written in Python and they are the link between the descriptive tests in `.feature` files and the actual application code. Go ahead and open `steps.py` and add the following imports:
+
+```py
+from behave import given, when, then
+from calculator import Calculator
+```
+
+Behave steps use annotations that match the names of the phases. This is the first step as described in the scenario:
+
+```py
+@given(u'I have the numbers {num1} and {num2}')
+def step_impl(context, num1, num2):
+    print(u'STEP: Given I have the numbers {} and {}'.format(num1, num2))
+    context.num1 = int(num1)
+    context.num2 = int(num2)
+```
+
+It’s important to notice that the text inside of the annotation matches the scenario text exactly. If it doesn’t match, the test cannot run.
+
+The context object is passed from step to step, and it is where we can store information to be used by other steps. Since this step is a “given”, we need to initialize our state. We do that by storing our numbers in `num1` & `num2` variables and attaching them to the context. If you run behave again, you’ll see the test fails, because the “when” and “then” steps are not implemented. You can run behave command after each step to see how the tests are working.
+
+Here are the next steps to add to `steps.py`:
+
+```py
+@when(u'I add them')
+def step_impl(context, opr):
+    print(u'STEP: When I add them')
+    context.result = Calculator().add(
+        context.num1,
+        context.num2
+    )
+```
+
+Again, the annotation text matches the text in the scenario exactly. In the “when” step, we have access to the two numbers using context and we call the Calculator class to call the add method with the numbers.
+
+Finally, in the “then” step, we still have access to the numbers and their sum, and we assert that the result is equal to the expected sum.
+
+```py
+@then(u'I expect the result to be {result}')
+def step_impl(context, result):
+    print(u'STEP: Then I expect the result to be {}'.format(result))
+    assert context.result == int(result),
+    'Expected {}, got {}'.format(result, context.result)
+```
+
+We are done with the tests now, let's switch to `calculator.py` and define the add method:
+
+```py
+#!/usr/bin/env python3
+
+class Calculator:
+    def __init__(self, caching=True):
+        """ init """
+        pass
+
+    def add(self, xxx, yyy):
+        """ addition """
+        return xxx + yyy
+```
+
+Everything looks good, let's go ahead and run the behave command again and you should see that the test passes:
+
+```bash
+$ behave
+Feature: Test Calculator Functionality # features/calculator.feature:2
+
+  Scenario: Addition                  # features/calculator.feature:4
+    Given I have the numbers 10 and 5 # features/steps/steps.py:5 0.000s
+    When I add them                   # features/steps/steps.py:12 0.000s
+    Then I expect the result to be 15 # features/steps/steps.py:21 0.000s
+
+1 feature passed, 0 failed, 0 skipped
+1 scenario passed, 0 failed, 0 skipped
+3 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m0.001s
+
+```
+
+### Extending the Calculator
+
+Now that we have addition, let's add multiplication too.
+
+As mentioned above, we will add the tests first in `calculator.feature` file:
+
+```feature
+  Scenario: Multiplication
+      Given I have the numbers 10 and 5
+      When I mult them
+      Then I expect the result to be 50
+```
+
+Next, we are add the implementation in the `steps.py`. Also, see that the `Given` and `Then` looks similar to that of the Addition scenario, so we don't need to define them again.
+
+```py
+@when(u'I mult them')
+def step_impl(context, opr):
+    print(u'STEP: When I mult them')
+    context.result = Calculator().mult(
+        context.num1,
+        context.num2
+    )
+```
+
+And lastly, implement the `mult` method in the `calculator.py` file:
+
+```py
+#!/usr/bin/env python3
+
+class Calculator:
+    ...
+
+    def mult(self, xxx, yyy):
+        """ multiply """
+        return xxx * yyy
+```
+
+When you run the behave command again, you can see that all the tests pass (1 Feature, 2 Scenarios and 6 Steps).
+
+### Optimizing the tests and code
+
+You can see that the steps implementation have a lot in common. So, we can try to optimize it by parsing the arithmetic operation also as a variable in the `steps.py`:
+
+```py
+@when(u'I {opr} them')
+def step_impl(context, opr):
+    print(u'STEP: When I add them')
+    context.result = Calculator().operator(
+        opr,
+        context.num1,
+        context.num2
+    )
+```
+
+and the `calculator.py` should look something like:
+
+```py
+class Calculator(object):
+    def __init__(self, caching=True):
+        """ init """
+        pass
+
+    def add(self, xxx, yyy):
+        """ addition """
+        return xxx + yyy
+
+    def mult(self, xxx, yyy):
+        """ multiply """
+        return xxx * yyy
+
+    def operator(self, opr, xxx, yyy):
+        if opr == 'add':
+            return self.add(xxx, yyy)
+        elif opr == 'mult':
+            return self.mult(xxx, yyy)
+```
+
+### Environmental Controls
+
+Similar to `setUp` and `tearDown` in unit tests, the [`environment.py` module](https://behave.readthedocs.io/en/stable/tutorial.html#environmental-controls) can define code to run before and after certain events during your testing. We can use this to initialize the Calculator class since we need it in every scenario.
+
+Create `environment.py` file in the `features/` folder and add the following code:
+
+```py
+from calculator import Calculator
+
+
+def before_all(context):
+    context.calculator = Calculator()
+
+
+def after_all(context):
+    del context.calculator
+```
+
+This would initialize the Calculator before everything and stores it in the context so that we can use it in any step. With this, we can change the code in `steps.py` as:
+
+```py
+@when(u'I {opr} them')
+def step_impl(context, opr):
+    print(u'STEP: When I add them')
+    context.result = context.calculator.operator(
+        opr,
+        context.num1,
+        context.num2
+    )
+```
+
+### Conclusion
+
+This tutorial walked you through setting up a new project with the Behave library and using test-driven development to build a calculator based off of behavioral tests.
+
+If you would like to get experience writing more tests with this project, try implementing the division, modulus and other arithmetic and advanced operations.
+
+### Resources
+
+- You can find the full source code of the implementation: [vchrombie/bdd-testing-behave](https://github.com/vchrombie/bdd-testing-behave)
+- [Tutorial &mdash; behave 1.2.6 documentation](https://behave.readthedocs.io/en/stable/tutorial.html)
+- BDD Quickstart with Python: https://blog.visionify.ai/bdd-quickstart-with-python-4cf366cfc11c
+
+Have a comment? You can drop it below.
+
+adios 👋
