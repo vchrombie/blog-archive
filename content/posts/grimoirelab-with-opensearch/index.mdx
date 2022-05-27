@@ -1,0 +1,42 @@
+---
+title: GrimoireLab with OpenSearch
+date: 2021-05-17
+tags: 
+  - GrimoireLab
+  - OpenSearch
+slug: "grimoirelab-with-opensearch"
+---
+
+Hola!
+
+In this blog post, I will be discussing how to use GrimoireLab with OpenSearch. Before going into the details, let me briefly explain what they are and the purpose of this post.
+
+### OpenSearch
+
+During the start of 2021, Elastic announced they will change their software licensing strategy, and will not release new versions of Elasticsearch and Kibana under the ALv2. Instead, new versions of the software will be offered under the Elastic License or the SSPL. This means that Elasticsearch and Kibana will no longer be open source software. In order to ensure open source versions of both packages remain available and well supported, AWS announced to create and maintain a ALv2-licensed fork of open source Elasticsearch and Kibana. This project was introduced as the OpenSearch.
+
+References:
+- [Stepping up for a truly open source Elasticsearch](https://aws.amazon.com/blogs/opensource/stepping-up-for-a-truly-open-source-elasticsearch/)
+- [Introducing OpenSearch](https://aws.amazon.com/blogs/opensource/introducing-opensearch/)
+
+[OpenSearch](https://opensearch.net/) is a community-driven, open source search and analytics suite derived from Apache 2.0 licensed Elasticsearch 7.10.2 & Kibana 7.10.2. It consists of a search engine daemon, OpenSearch, and a visualization and user interface, OpenSearch Dashboards. OpenSearch enables people to easily ingest, secure, search, aggregate, view, and analyze data.
+
+### GrimoireLab
+
+[GrimoireLab](https://chaoss.github.io/grimoirelab/) is a set of free, open source software tools for software development analytics. They gather data from several platforms involved in software development (Git, GitHub, Jira, Bugzilla, Gerrit, Mailing lists, Jenkins, Slack, Discourse, Confluence, StackOverflow, and more), merge and organize it in a database, and produce visualizations, actionable dashboards, and analytics of all of it. GrimoireLab is focused on analyzing activity, community, and processes. Nonetheless, it can be easily tailored for other aims, and integrated with other tools.
+
+### How GrimoireLab is related to OpenSearch
+
+GrimoireLab uses Elasticsearch as the database to store the raw & enriched data collected from different data sources. Also, Kibiter which is a component of GrimoireLab is a custom fork of Kibana. Kibiter is used to work on new ideas for metrics & data visualization to be used by GrimoireLab Panels. The current version of GrimoireLab supports the Elasticsearch 6.8.6 version and we were working on supporting the next 7.x.x versio. Due to the license change announced by the Elastic, GrimoireLab is affected directly as it cannot use the latest versions of Elasticsearch and Kibana. So, OpenSearch announcement was a sight of relief and we decided to replace Elasticsearch with OpenSearch.
+
+### GrimoireLab with OpenSearch
+
+[Quan](https://github.com/zhquan/) has worked on GrimoireLab to support Elasticsearch and Kibana 7.10 as we were planning to add support for [Open Distro for Elasticsearch](https://opendistro.github.io/for-elasticsearch/).
+
+So, the work is now much simpler as OpenSearch is forked from Elasticsearch & Kibana 7.10.2 version.
+
+Steps to get GrimoireLab running with OpenSearch
+
+1. Get the OpenSearch and OpenSearch Dashboards running using the docker-compose. You can find more about it from the [OpenSearch Downloads](https://opensearch.net/downloads.html) page.
+
+2. Setup GrimoireLab using the source code method since we are going to use some 
