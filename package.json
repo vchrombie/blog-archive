@@ -19,9 +19,9 @@
   "dependencies": {
     "@giscus/react": "^2.2.0",
     "@lekoarts/gatsby-theme-minimal-blog": "^5.0.2",
-    "gatsby": "^2.32.13",
+    "gatsby": "^5.5.0",
     "gatsby-omni-font-loader": "^2.0.2",
-    "gatsby-plugin-feed": "^2.13.1",
+    "gatsby-plugin-feed": "^5.5.0",
     "gatsby-plugin-gatsby-cloud": "^1.0.2",
     "gatsby-plugin-google-analytics": "^2.11.0",
     "gatsby-plugin-manifest": "^4.24.0",
